@@ -28,6 +28,11 @@
   align-items: center;
   gap: 50px;
   padding: 20px;
+  font-weight: 700;
+}
+.rItemInfo {
+  gap: 6px;
+  display: grid;
 }
 
 .rInfo {
@@ -37,32 +42,48 @@
 }
 
 .rTitle {
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .rDesc {
-  font-weight: 300;
+  /* font-weight: 300; */
 }
 
 .rMax {
-  font-size: 12px;
+    font-size: 15px;
 }
 
 .rPrice {
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
-.rSelectRooms{
+.rSelectRooms {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  font-size: 8px;
+  gap: 10px;
+  font-size: 14px;
   color: gray;
 }
 
+.rSelectRooms input[type="checkbox"] {
+  padding: 10px;
+  margin: 5px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 4px;
+  width: 17px;
+}
+
+
+
+
 .room{
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  align-items: center;
 }
 
 .rButton {

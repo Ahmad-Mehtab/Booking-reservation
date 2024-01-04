@@ -38,7 +38,7 @@ const Header = ({ type }) => {
   const { user } = useContext(AuthContext);
 
 
-  const handleOption = (name, operation) => {
+  const handleOption = (name, operation) => { 
     setOptions((prev) => {
       return {
         ...prev,
@@ -51,7 +51,7 @@ const Header = ({ type }) => {
 
   const handleSearch = () => {
     dispatch({ type: "NEW_SEARCH", payload: { destination, dates, options } });
-    navigate("/hotels", { state: { destination, dates, options } });
+    navigate("/list", { state: { destination, dates, options } });
   };
 
   return (

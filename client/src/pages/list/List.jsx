@@ -11,6 +11,7 @@ import gif from "../../assets/images/VAyR.gif";
 
 const List = () => {
   const location = useLocation();
+
   const [destination, setDestination] = useState(location.state.destination);
   const [dates, setDates] = useState(location.state.dates);
   const [openDate, setOpenDate] = useState(false);

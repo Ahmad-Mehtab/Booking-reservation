@@ -19,7 +19,11 @@ import Reserve from "../../components/reserve/Reserve";
 
 const Hotel = () => {
   const location = useLocation();
+
   const id = location.pathname.split("/")[2];
+
+  
+
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
@@ -31,20 +35,23 @@ const Hotel = () => {
   const { dates, options } = useContext(SearchContext);
 
   const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
+
   function dayDifference(date1, date2) {
-    const timeDiff = Math.abs(date2.getTime() - date1.getTime());
+    console.log(date1.getTime());
+    const timeDiff = Math.abs(date2?.getTime() - date1?.getTime());
     const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
     return diffDays;
   }
-
+  // {days * data.cheapestPrice * options.room}
   const days = dayDifference(dates[0]?.endDate, dates[0]?.startDate);
-
+ 
   const handleOpen = (i) => {
     setSlideNumber(i);
     setOpen(true);
   };
 
-  const handleMove = (direction) => {
+  const handleMove = (direction) => { 
+
     let newSlideNumber;
 
     if (direction === "l") {
