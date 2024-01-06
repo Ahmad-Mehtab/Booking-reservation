@@ -1,5 +1,5 @@
 import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
+import Login from "../../admin/src/pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
@@ -10,8 +10,8 @@ import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
 import { hotelColumns, roomColumns, userColumns } from "./datatablesource";
-// import NewHotel from "./pages/newHotel/NewHotel";
-// import NewRoom from "./pages/newRoom/NewRoom";
+import NewHotel from "./pages/newHotel/NewHotel";
+import NewRoom from "./pages/newRoom/NewRoom";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -83,14 +83,14 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              {/* <Route
+              <Route
                 path="new"
                 element={
                   <ProtectedRoute>
                     <NewHotel />
                   </ProtectedRoute>
                 }
-              /> */}
+              />
             </Route>
             <Route path="rooms">
               <Route
@@ -109,14 +109,14 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              {/* <Route
+              <Route
                 path="new"
                 element={
                   <ProtectedRoute>
                     <NewRoom />
                   </ProtectedRoute>
                 }
-              /> */}
+              />
             </Route>
           </Route>
         </Routes>
@@ -126,4 +126,3 @@ function App() {
 }
 
 export default App;
-
